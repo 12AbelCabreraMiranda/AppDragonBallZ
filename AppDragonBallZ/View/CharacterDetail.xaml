@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDragonBallZ.View.CharacterDetail"
+             NavigationPage.HasNavigationBar="False"
+             Title="CharacterDetail">
+    <ContentPage.Content>
+        <Grid BackgroundColor="Yellow">
+            <!-- Fila para la portada -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <!--Fila portada y perfil-->
+            <Grid Grid.Row="0"
+                  BackgroundColor="Green">
+                <!-- Imagen de la portada -->
+                <Image Source="{Binding Character.OriginPlanet.Image}"
+                       Aspect="AspectFill"
+                       Grid.Row="0" />
+                <!-- Imagen de perfil -->
+                <Frame Grid.Row="0"
+                       BackgroundColor="White"
+                       CornerRadius="60"
+                       WidthRequest="120"
+                       HeightRequest="120"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Start"
+                       Margin="10,60,0,0">
+                    <Image Source="{Binding Character.Image}"
+                           Aspect="AspectFit"                          
+                           WidthRequest="120"
+                           HeightRequest="120"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+                </Frame>
+            </Grid>
+            
+            <!--Fila Nombre personaje y origen planeta -->
+            <Grid Grid.Row="1"   BackgroundColor="Green" Opacity="0.5"              
+                ColumnDefinitions=".3*,.7*">
+                <StackLayout Grid.Column="1"                            
+                             Margin="10,0,0,0">
+                    <Label Text="{Binding Character.Name}"
+                           FontSize="24"/>
+                    <Label Text="{Binding Character.OriginPlanet.Name, StringFormat='Origen planeta: {0}'}"
+                           FontSize="16"/>
+                </StackLayout>
+            </Grid>
+            
+            <!--Fila detalle poder-->
+            <Grid Grid.Row="2">
+                <Label Text="rest"></Label>
+            </Grid>
+            <Grid Grid.Row="3" Margin="10">
+                <Label Text="{Binding Character.Description}"></Label>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

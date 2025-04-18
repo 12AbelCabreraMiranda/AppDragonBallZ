@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App_DragonBallZ.RepositoryPattern
+namespace AppDragonBallZ.RepositoryPattern
 {
     public class CharactersRepository : ICharactersRepository
     {
@@ -45,12 +45,39 @@ namespace App_DragonBallZ.RepositoryPattern
             return respuesta;
         }
 
-        public Task<Respuesta> GetCharacterId(int CharacterId)
+        public async Task<Respuesta> GetCharacterById(long characterId)
         {
-            throw new NotImplementedException();
+            Respuesta respuesta = new();
+            try
+            {
+                string urlApi = $"{Utilidades.UrlApiDBZ}/{characterId}";
+
+                var httpClient = new HttpClient();
+                Character character = new();
+
+                var response = await httpClient.GetAsync(urlApi);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<Character>(content);
+                    character = result;
+                }
+
+                respuesta.Data = character;
+                respuesta.Resultado = true;
+                respuesta.Mensaje = "Consulta exitosa";
+
+            }
+            catch (Exception ex)
+            {
+                respuesta.Resultado = false;
+                respuesta.Mensaje = "Error en método: GetCharacterById - > " + ex.Message.ToString();
+            }
+
+            return respuesta;
         }
 
-        public Task<Respuesta> GetCharacterName(string name)
+        public Task<Respuesta> GetCharacterByName(string name)
         {
             throw new NotImplementedException();
         }

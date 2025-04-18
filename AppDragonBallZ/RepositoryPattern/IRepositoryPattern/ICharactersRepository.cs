@@ -10,8 +10,8 @@ namespace AppDragonBallZ.RepositoryPattern.IRepositoryPattern
     public interface ICharactersRepository
     {
         Task<Respuesta> Characters(string uriApi);
-        Task<Respuesta> GetCharacterId(int CharacterId);
-        Task<Respuesta> GetCharacterName(string name);
+        Task<Respuesta> GetCharacterById(long characterId);
+        Task<Respuesta> GetCharacterByName(string name);
         
     }
 }

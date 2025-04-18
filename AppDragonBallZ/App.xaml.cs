@@ -8,7 +8,8 @@ namespace AppDragonBallZ
         {
             InitializeComponent();
 
-            MainPage = new Characters();
+            //MainPage = new Characters();
+            MainPage = new NavigationPage(new Characters());
         }
     }
 }

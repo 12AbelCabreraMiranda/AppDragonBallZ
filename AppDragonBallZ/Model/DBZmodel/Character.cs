@@ -8,7 +8,7 @@ using Newtonsoft.Json.Converters;
 
 namespace AppDragonBallZ.Model.DBZmodel
 {
-    public partial class Character
+    public class Character
     {
         [JsonProperty("id")]
         public long Id { get; set; }

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppDragonBallZ.View.Characters"
+             NavigationPage.HasNavigationBar="False"
              Title="Characters">
   
        
@@ -57,7 +58,8 @@
             </ScrollView>
             
             <!--Personajes-->               
-            <CollectionView ItemsSource="{Binding Pagination.Characters}">
+            <CollectionView ItemsSource="{Binding Pagination.Characters}"
+                            x:Name="characters">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
                                         Span="2" />
@@ -91,9 +93,15 @@
                                     </Border.Shadow>
                                 </Border>
                                 <Image Aspect="AspectFit"
-                                        HeightRequest="300"
-                                        Source="{Binding Image}"></Image>
+                                       HeightRequest="300"
+                                       Source="{Binding Image}" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.SeleccionarPersonajeCommand, Source={x:Reference characters}}"
+                                                          CommandParameter="{Binding Id}" />
+                                </Grid.GestureRecognizers>
                             </Grid>
+                            
+                            <!--Nombre personaje-->
                             <Grid Grid.Row="1"
                                     Margin="0,0,0,0">
                                 <Label HorizontalOptions="Center"

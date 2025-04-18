@@ -1,13 +1,9 @@
-﻿using App_DragonBallZ.RepositoryPattern;
+﻿using AppDragonBallZ.RepositoryPattern;
 using AppDragonBallZ.Generico;
 using AppDragonBallZ.Model;
 using AppDragonBallZ.Model.DBZmodel;
 using AppDragonBallZ.RepositoryPattern.IRepositoryPattern;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AppDragonBallZ.View;
 using System.Windows.Input;
 
 namespace AppDragonBallZ.ViewModel
@@ -148,11 +144,26 @@ namespace AppDragonBallZ.ViewModel
             }
            
         }
+        
+        public async void SeleccionarPersonaje(long characterId)
+        {
+            try
+            {
+               
+                await Navigation.PushAsync(new CharacterDetail(characterId));
+            }
+            catch (Exception ex)
+            {
+
+                await DisplayAlert("Error en método: SeleccionarPersonaje -> ", ex.Message.ToString(), "Ok");
+            }
+        }
         #endregion
 
         #region COMANDOS        
         public ICommand SiguientePaginaCommand => new Command<Pagination>(SiguientePagina);
         public ICommand AnteriorPaginaCommand => new Command<Pagination>(AnteriorPagina);
+        public ICommand SeleccionarPersonajeCommand => new Command<long>(SeleccionarPersonaje);
         #endregion
     }
 }

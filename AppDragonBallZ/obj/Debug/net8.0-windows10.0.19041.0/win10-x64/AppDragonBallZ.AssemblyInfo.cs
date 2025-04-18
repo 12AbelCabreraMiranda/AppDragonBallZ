@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppDragonBallZ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+32310f71f5abe2deea433ab3013dc5ed8aea9e6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppDragonBallZ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppDragonBallZ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

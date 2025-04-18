@@ -48,6 +48,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = AppDragonBallZ.Resources.S
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/cabre/Documents/Visual Studio 2022/Project/AppDragonBallZ/AppDragonBallZ/View/CharacterDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppDragonBallZ.View.CharacterDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CharacterDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CharacterDetail.xaml
+
 [C:/Users/cabre/Documents/Visual Studio 2022/Project/AppDragonBallZ/AppDragonBallZ/View/Characters.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDragonBallZ.View.Characters.xaml
