@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|solutionrelative:appdragonballz\\view\\characterdetail.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|c:\\users\\cabre\\documents\\visual studio 2022\\project\\appdragonballz\\appdragonballz\\viewmodel\\characterdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|solutionrelative:appdragonballz\\viewmodel\\characterdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|c:\\users\\cabre\\documents\\visual studio 2022\\project\\appdragonballz\\appdragonballz\\view\\characters.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|solutionrelative:appdragonballz\\view\\characters.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|c:\\users\\cabre\\documents\\visual studio 2022\\project\\appdragonballz\\appdragonballz\\viewmodel\\characterdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|solutionrelative:appdragonballz\\viewmodel\\characterdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{18270810-794C-44EE-A82A-30014C0C6848}|AppDragonBallZ\\AppDragonBallZ.csproj|c:\\users\\cabre\\documents\\visual studio 2022\\project\\appdragonballz\\appdragonballz\\view\\characterdetail.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,12 +50,11 @@
               "RelativeToolTip": "AppDragonBallZ\\View\\CharacterDetail.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T17:00:14.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T17:00:14.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CharacterDetailViewModel.cs",
               "DocumentMoniker": "C:\\Users\\cabre\\Documents\\Visual Studio 2022\\Project\\AppDragonBallZ\\AppDragonBallZ\\ViewModel\\CharacterDetailViewModel.cs",
               "RelativeDocumentMoniker": "AppDragonBallZ\\ViewModel\\CharacterDetailViewModel.cs",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "AppDragonBallZ\\ViewModel\\CharacterDetailViewModel.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAA5wEEAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T20:43:01.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T20:43:01.716Z"
             },
             {
               "$type": "Document",
@@ -74,7 +72,7 @@
               "RelativeDocumentMoniker": "AppDragonBallZ\\View\\CharacterDetail.xaml",
               "ToolTip": "C:\\Users\\cabre\\Documents\\Visual Studio 2022\\Project\\AppDragonBallZ\\AppDragonBallZ\\View\\CharacterDetail.xaml",
               "RelativeToolTip": "AppDragonBallZ\\View\\CharacterDetail.xaml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAEYAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-17T17:57:44.616Z",
               "EditorCaption": ""
@@ -89,8 +87,7 @@
               "RelativeToolTip": "AppDragonBallZ\\RepositoryPattern\\CharactersRepository.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAUwEMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T03:30:52.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T03:30:52.255Z"
             },
             {
               "$type": "Document",
@@ -127,13 +124,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Characters.xaml",
               "DocumentMoniker": "C:\\Users\\cabre\\Documents\\Visual Studio 2022\\Project\\AppDragonBallZ\\AppDragonBallZ\\View\\Characters.xaml",
               "RelativeDocumentMoniker": "AppDragonBallZ\\View\\Characters.xaml",
               "ToolTip": "C:\\Users\\cabre\\Documents\\Visual Studio 2022\\Project\\AppDragonBallZ\\AppDragonBallZ\\View\\Characters.xaml",
               "RelativeToolTip": "AppDragonBallZ\\View\\Characters.xaml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-17T03:11:26.605Z",
               "EditorCaption": ""
