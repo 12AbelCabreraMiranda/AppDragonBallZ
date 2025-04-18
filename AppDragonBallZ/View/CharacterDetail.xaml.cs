@@ -10,4 +10,5 @@ public partial class CharacterDetail : ContentPage
 		InitializeComponent();
         BindingContext = new CharacterDetailViewModel(Navigation, characterId);
     }
+  
 }

@@ -4,8 +4,8 @@
              x:Class="AppDragonBallZ.View.CharacterDetail"
              NavigationPage.HasNavigationBar="False"
              Title="CharacterDetail">
-    <ContentPage.Content>
-        <Grid BackgroundColor="Yellow">
+    <ScrollView>
+        <Grid BackgroundColor="white">
             <!-- Fila para la portada -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="120" />
@@ -15,8 +15,7 @@
             </Grid.RowDefinitions>
             
             <!--Fila portada y perfil-->
-            <Grid Grid.Row="0"
-                  BackgroundColor="Green">
+            <Grid Grid.Row="0">
                 <!-- Imagen de la portada -->
                 <Image Source="{Binding Character.OriginPlanet.Image}"
                        Aspect="AspectFill"
@@ -40,24 +39,106 @@
             </Grid>
             
             <!--Fila Nombre personaje y origen planeta -->
-            <Grid Grid.Row="1"   BackgroundColor="Green" Opacity="0.5"              
+            <Grid Grid.Row="1" 
                 ColumnDefinitions=".3*,.7*">
                 <StackLayout Grid.Column="1"                            
                              Margin="10,0,0,0">
                     <Label Text="{Binding Character.Name}"
-                           FontSize="24"/>
+                           FontSize="24"
+                           TextColor="Black"/>
                     <Label Text="{Binding Character.OriginPlanet.Name, StringFormat='Origen planeta: {0}'}"
-                           FontSize="16"/>
+                           FontSize="16"
+                           TextColor="Black"/>
+                    
                 </StackLayout>
             </Grid>
-            
-            <!--Fila detalle poder-->
-            <Grid Grid.Row="2">
-                <Label Text="rest"></Label>
+           
+            <!--Fila transformaciones-->
+            <Grid Grid.Row="2"
+                  Margin="10,10,0,0">
+                <Label Text="Transformaciones"
+                       Margin="0,10,0,0"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       TextColor="#301610" />
+                <!-- carousel transformaciones-->
+                <Grid Margin="0,40,0,0">
+                    <Label Text="No existe transformación"
+                           IsVisible="{Binding EstadoExisteTransformacion}"/>
+                    <CarouselView ItemsSource="{Binding Character.Transformations}"
+                                  IndicatorView="indicatorViewTransformation"
+                                  PeekAreaInsets="120"
+                                  
+                                  Loop="True">
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal"
+                                               ItemSpacing="10"
+                                               SnapPointsAlignment="Center"
+                                               SnapPointsType="MandatorySingle" />
+                        </CarouselView.ItemsLayout>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <!--contenedor imagen-->
+                                <Grid>
+                                    <!--card-->
+                                    <Border HeightRequest="200"
+                                            WidthRequest="200"
+                                            StrokeShape="RoundRectangle 0,0,0,0"
+                                            StrokeThickness="0">
+                                        <!--color de fondo degradado-->
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0"
+                                                                 EndPoint="1,1">
+                                                <GradientStop Color="#332b2b"
+                                                              Offset="0.0" />
+                                                <GradientStop Color="#ffffff"
+                                                              Offset="0.5" />
+                                                <GradientStop Color="#ffffff"
+                                                              Offset="1.0" />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                    <!--imagen personaje transformacion-->
+                                    <Image Aspect="AspectFit"
+                                           HeightRequest="300"
+                                           Source="{Binding Image}" />
+                                    <!--nombre transformacion-->
+                                    <Button Text="{Binding Name}"
+                                            FontSize="10"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="Black"
+                                            CornerRadius="20"
+                                            TextColor="White"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="End"
+                                            HeightRequest="25"
+                                            Opacity="0.6"
+                                            Padding="8,0,8,0" />
+                                </Grid>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <!--indicador carousel-->
+                    <IndicatorView x:Name="indicatorViewTransformation"
+                                   HorizontalOptions="Center"
+                                   IndicatorColor="Black"
+                                   IndicatorSize="8"
+                                   SelectedIndicatorColor="#ad503b"
+                                   VerticalOptions="End" />
+                </Grid>
             </Grid>
-            <Grid Grid.Row="3" Margin="10">
-                <Label Text="{Binding Character.Description}"></Label>
+            <!--Fila descripcion personaje-->
+            <Grid Grid.Row="3"
+                  Margin="10"
+                  RowDefinitions="*,*">
+                <Label Grid.Row="0"
+                       Text="Descipción:"
+                       FontAttributes="Bold"
+                       TextColor="Black" />
+                <Label Grid.Row="1"
+                       Text="{Binding Character.Description}"
+                       TextColor="#301610" />
             </Grid>
         </Grid>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

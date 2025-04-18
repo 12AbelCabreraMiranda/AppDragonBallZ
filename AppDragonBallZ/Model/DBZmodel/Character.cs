@@ -44,6 +44,6 @@ namespace AppDragonBallZ.Model.DBZmodel
         public OriginPlanet OriginPlanet { get; set; }
 
         [JsonProperty("transformations")]
-        public Transformation[] Transformations { get; set; }
+        public List<Transformation> Transformations { get; set; }
     }
 }

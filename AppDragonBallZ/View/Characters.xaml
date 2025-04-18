@@ -69,11 +69,13 @@
                         <Grid Padding="20,0,20,0"
                                 RowDefinitions="*,*"
                                 Margin="0,10">
+                            <!--card imagen-->
                             <Grid Grid.Row="0">
                                 <Border HeightRequest="280"
                                         Stroke="#87878a"
                                         StrokeShape="RoundRectangle 20,20,20,20"
                                         StrokeThickness="0">
+                                    <!--color de fondo degradado-->
                                     <Border.Background>
                                         <LinearGradientBrush StartPoint="0,0"
                                                                 EndPoint="1,1">
@@ -85,6 +87,7 @@
                                                             Offset="1.0" />
                                         </LinearGradientBrush>
                                     </Border.Background>
+                                    <!--sombra-->
                                     <Border.Shadow>
                                         <Shadow Brush="Black"
                                                 Opacity="0.5"
@@ -92,6 +95,7 @@
                                                 Radius="10" />
                                     </Border.Shadow>
                                 </Border>
+                                <!--imagen personaje-->
                                 <Image Aspect="AspectFit"
                                        HeightRequest="300"
                                        Source="{Binding Image}" />

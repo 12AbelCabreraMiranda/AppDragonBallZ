@@ -19,7 +19,8 @@ namespace AppDragonBallZ.ViewModel
         private readonly ICharactersRepository charactersRepository = new CharactersRepository();
         Character _character = new();
 
-       
+        bool _estadoExisteTransformacion;
+
         #endregion
 
         #region OBJETOS
@@ -28,6 +29,11 @@ namespace AppDragonBallZ.ViewModel
             get { return _character; }
             set { SetValue(ref _character, value); }
         }
+        public bool EstadoExisteTransformacion
+        {
+            get { return _estadoExisteTransformacion; }
+            set { SetValue(ref _estadoExisteTransformacion, value); }
+        }
         #endregion
 
         #region CONSTRUCTOR
@@ -35,6 +41,7 @@ namespace AppDragonBallZ.ViewModel
         {
             Navigation = navigation;
             ObtenerUnPersonaje(characterId);
+            EstadoExisteTransformacion = false;
         }
         #endregion
 
@@ -50,6 +57,15 @@ namespace AppDragonBallZ.ViewModel
                 }
 
                 Character = (Character)respuesta.Data;
+                if (Character == null)
+                {
+                    await DisplayAlert("Error", "No se encontró el personaje", "Ok");
+                    return;
+                }
+                
+                EstadoExisteTransformacion = Character.Transformations.Count > 0 ? false : true;
+                
+                
 
             }
             catch (Exception ex)
@@ -57,14 +73,11 @@ namespace AppDragonBallZ.ViewModel
                 await DisplayAlert("Error en método: ObtenerUnPersonaje -> ", ex.Message.ToString(), "Ok");
             }
         }
-        public void ProcesoSimple()
-        {
-
-        }
+        
         #endregion
 
         #region COMANDOS        
-        public ICommand ProcesoSimpcommand => new Command(ProcesoSimple);
+     
         #endregion
     }
 }
